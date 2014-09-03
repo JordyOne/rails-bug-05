@@ -21,6 +21,7 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
+    p params[:id]
     if @task.update_attributes(task_params)
       redirect_to root_path, notice: "Task was updated successfully!"
     else
